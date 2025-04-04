@@ -22,7 +22,7 @@ for filename in os.listdir(text_folder): #får alle filer fra mappen
         with open(file_path, "r", encoding="utf-8") as file:
             text = file.read()
             all_documents.append(Document(page_content=text, metadata={"source": filename})) #læser alle filer og gemmer den i all_documents
-            
+
 
 #opdele teksten i mindre dele
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
